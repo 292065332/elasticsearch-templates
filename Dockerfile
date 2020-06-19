@@ -1,3 +1,3 @@
 FROM guoyk/esloadtpl
 
-ADD template .
+ADD templates .
