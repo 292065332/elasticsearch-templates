@@ -1,0 +1,221 @@
+{
+  "index_patterns": [
+    "x-mybatis-track-*"
+  ],
+  "settings": {
+    "index": {
+      "routing": {
+        "allocation": {
+          "exclude": {
+            "disktype": "hdd"
+          }
+        }
+      },
+      "refresh_interval": "10s",
+      "number_of_shards": "6",
+      "translog": {
+        "sync_interval": "10s",
+        "durability": "async"
+      },
+      "number_of_replicas": "0"
+    }
+  },
+  "mappings": {
+    "properties": {
+      "timestamp": {
+        "type": "date"
+      },
+      "raw_size": {
+        "type": "long"
+      },
+      "crid": {
+        "type": "keyword"
+      },
+      "crsrc": {
+        "type": "keyword"
+      },
+      "env": {
+        "type": "keyword"
+      },
+      "hostname": {
+        "type": "keyword"
+      },
+      "project": {
+        "type": "keyword"
+      },
+      "topic": {
+        "type": "keyword",
+        "index": false
+      },
+      "via": {
+        "type": "keyword",
+        "index": false
+      },
+      "keyword": {
+        "type": "text"
+      },
+      "message": {
+        "type": "text",
+        "index": false
+      },
+      "x_target_project": {
+        "type": "keyword"
+      },
+      "x_thread_name": {
+        "type": "keyword"
+      },
+      "x_class_name": {
+        "type": "keyword"
+      },
+      "x_class_line": {
+        "type": "long"
+      },
+      "x_method_name": {
+        "type": "keyword"
+      },
+      "x_exception_class": {
+        "type": "keyword"
+      },
+      "x_exception_stack": {
+        "type": "text"
+      },
+      "x_duration": {
+        "type": "long"
+      },
+      "x_host": {
+        "type": "keyword"
+      },
+      "x_header_app_info": {
+        "type": "text",
+        "index": false
+      },
+      "x_header_user_token": {
+        "type": "keyword",
+        "index": false
+      },
+      "x_method": {
+        "type": "keyword"
+      },
+      "x_params": {
+        "type": "text"
+      },
+      "x_path": {
+        "type": "keyword"
+      },
+      "x_path_digest": {
+        "type": "keyword"
+      },
+      "x_query": {
+        "type": "text",
+        "index": false
+      },
+      "x_status": {
+        "type": "long"
+      },
+      "x_ip": {
+        "type": "ip"
+      },
+      "x_user_code": {
+        "type": "keyword"
+      },
+      "x_user_name": {
+        "type": "keyword"
+      },
+      "x_action": {
+        "type": "keyword"
+      },
+      "x_action_detail": {
+        "type": "text"
+      },
+      "x_url": {
+        "type": "keyword"
+      },
+      "x_affected_rows": {
+        "type": "long"
+      },
+      "x_database_url": {
+        "type": "text",
+        "index": false
+      },
+      "x_db_host": {
+        "type": "keyword"
+      },
+      "x_db_name": {
+        "type": "keyword"
+      },
+      "x_sql": {
+        "type": "text",
+        "index": false
+      },
+      "x_sql_digest": {
+        "type": "keyword"
+      },
+      "x_raw_sql": {
+        "type": "text",
+        "index": false
+      },
+      "x_level": {
+        "type": "keyword"
+      },
+      "x_file": {
+        "type": "keyword"
+      },
+      "x_thread_id": {
+        "type": "long"
+      },
+      "x_body_bytes_sent": {
+        "type": "long"
+      },
+      "x_http_host": {
+        "type": "keyword"
+      },
+      "x_http_referer": {
+        "type": "text",
+        "index": false
+      },
+      "x_http_user_agent": {
+        "type": "text",
+        "index": false
+      },
+      "x_http_x_forwarded_for": {
+        "type": "keyword",
+        "index": false
+      },
+      "x_protocol": {
+        "type": "keyword"
+      },
+      "x_remote_addr": {
+        "type": "keyword"
+      },
+      "x_request_time": {
+        "type": "long"
+      },
+      "x_upstream_addr": {
+        "type": "keyword"
+      },
+      "x_upstream_response_time": {
+        "type": "long"
+      },
+      "x_value_integer": {
+        "type": "long"
+      },
+      "x_cmd": {
+        "type": "keyword"
+      },
+      "x_cmd_digest": {
+        "type": "keyword"
+      },
+      "x_key": {
+        "type": "keyword"
+      },
+      "x_param_value": {
+        "type": "text",
+        "index": false
+      },
+      "x_param_value_size": {
+        "type": "long"
+      }
+    }
+  },
+  "aliases": {}
+}

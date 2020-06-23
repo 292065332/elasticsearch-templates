@@ -158,6 +158,24 @@ def build_template(name: str, patterns: List[str], *fieldsSet: Dict):
     with open(os.path.join("templates", name+'.json'), 'w') as out:
         json.dump(data, out,  indent=2, separators=(',', ': '))
 
+    # 构造没有 _doc 的模板描述
+    data = {
+        "index_patterns": patterns,
+        "settings": {
+            "index": {
+                "routing": {"allocation": {"exclude": {"disktype": "hdd"}}},
+                "refresh_interval": "10s",
+                "number_of_shards": "6",
+                "translog": {"sync_interval": "10s", "durability": "async"},
+                "number_of_replicas": "0"
+            }
+        },
+        "mappings": {"properties": properties},
+        "aliases": {}
+    }
+    # 写入模板描述文件
+    with open(os.path.join("templates-nomt", name+'.json'), 'w') as out:
+        json.dump(data, out,  indent=2, separators=(',', ': '))
 
 build_template("x-access", ["x-access-*"], COMMON)
 build_template("x-audit", ["x-audit-*"], COMMON)
