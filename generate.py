@@ -24,6 +24,8 @@ COMMON = {
     "keyword": {"type": "text"},
     # 消息（默认不索引）
     "message": {"type": "text", "index": False},
+    # 目标项目
+    "x_target_project": {"type": "keyword"},
     # 线程名
     "x_thread_name": {"type": "keyword"},
     # 类名

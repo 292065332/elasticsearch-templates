@@ -59,6 +59,9 @@
         "message": {
           "type": "text"
         },
+        "x_target_project": {
+          "type": "keyword"
+        },
         "x_thread_name": {
           "type": "keyword"
         },
