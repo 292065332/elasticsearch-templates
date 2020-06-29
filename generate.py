@@ -144,6 +144,7 @@ def build_template(name: str, patterns: List[str], *fieldsSet: Dict):
         "index_patterns": patterns,
         "settings": {
             "index": {
+                "codec": "best_compression",
                 "routing": {"allocation": {"exclude": {"disktype": "hdd"}}},
                 "refresh_interval": "10s",
                 "number_of_shards": "6",
@@ -163,6 +164,7 @@ def build_template(name: str, patterns: List[str], *fieldsSet: Dict):
         "index_patterns": patterns,
         "settings": {
             "index": {
+                "codec": "best_compression",
                 "routing": {"allocation": {"exclude": {"disktype": "hdd"}}},
                 "refresh_interval": "10s",
                 "number_of_shards": "6",

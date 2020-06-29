@@ -5,6 +5,7 @@
   ],
   "settings": {
     "index": {
+      "codec": "best_compression",
       "routing": {
         "allocation": {
           "exclude": {
