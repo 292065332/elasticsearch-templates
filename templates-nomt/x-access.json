@@ -215,6 +215,12 @@
       },
       "x_param_value_size": {
         "type": "long"
+      },
+      "x_logtube_version": {
+        "type": "keyword"
+      },
+      "x_lifecycle": {
+        "type": "keyword"
       }
     }
   },

@@ -121,7 +121,11 @@ COMMON = {
     # redis 操作参数
     "x_param_value": {"type": "text", "index": False},
     # redis 参数大小
-    "x_param_value_size": {"type": "long"}
+    "x_param_value_size": {"type": "long"},
+    # logtube 版本号
+    "x_logtube_version": {"type":"keyword"},
+    # 生命周期类型（boot, logtube-reload)
+    "x_lifecycle": {"type": "keyword"}
 }
 
 MESSAGE_WITH_INDEX = {
@@ -193,3 +197,4 @@ build_template("x-perf", ["x-perf-*"], COMMON)
 build_template("x-redis-track", ["x-redis-track-*"], COMMON)
 build_template("x-warn", ["warn-*"], COMMON)
 build_template("x-debug", ["debug-*"], COMMON)
+build_template("x-lifecycle", ["lifecycle-*"], COMMON)
