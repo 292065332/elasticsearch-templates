@@ -196,6 +196,9 @@
       "x_upstream_response_time": {
         "type": "long"
       },
+      "x_response_size": {
+        "type": "long"
+      },
       "x_value_integer": {
         "type": "long"
       },

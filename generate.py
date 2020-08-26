@@ -110,6 +110,8 @@ COMMON = {
     "x_upstream_addr": {"type": "keyword"},
     # 后端响应时间
     "x_upstream_response_time": {"type": "long"},
+    # 相应大小
+    "x_response_size": {"type":"long"},
     # 通用整数值
     "x_value_integer": {"type": "long"},
     # redis 操作
