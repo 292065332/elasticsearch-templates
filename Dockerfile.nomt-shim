@@ -1,0 +1,3 @@
+FROM guoyk/esloadtpl
+
+ADD templates-nomt-shim .
