@@ -59,7 +59,7 @@
       "message": {
         "type": "text"
       },
-      "x_instance": {
+      "x_module": {
         "type": "keyword"
       },
       "x_target_project": {
