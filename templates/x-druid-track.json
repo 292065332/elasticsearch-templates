@@ -60,6 +60,9 @@
           "type": "text",
           "index": false
         },
+        "x_instance": {
+          "type": "keyword"
+        },
         "x_target_project": {
           "type": "keyword"
         },

@@ -59,6 +59,9 @@
       "message": {
         "type": "text"
       },
+      "x_instance": {
+        "type": "keyword"
+      },
       "x_target_project": {
         "type": "keyword"
       },
