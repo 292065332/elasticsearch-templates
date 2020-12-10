@@ -62,6 +62,8 @@ COMMON = {
     "x_status": {"type": "long"},
     # IP
     "x_ip": {"type": "ip"},
+    # IP
+    "x_port": {"type": "long"},
     # 用户代码
     "x_user_code": {"type": "keyword"},
     # 用户姓名

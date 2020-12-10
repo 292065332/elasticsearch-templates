@@ -118,6 +118,9 @@
       "x_ip": {
         "type": "ip"
       },
+      "x_port": {
+        "type": "long"
+      },
       "x_user_code": {
         "type": "keyword"
       },
